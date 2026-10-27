@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-v2",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5174 --strictPort",
+    "test": "node --test tests/*.test.js",
+    "preview:source": "node scripts/serve.mjs",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4174 --strictPort"
+  },
+  "devDependencies": { "vite": "^8.0.0" }
+}
