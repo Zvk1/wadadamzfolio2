@@ -27,7 +27,7 @@ window.PORTFOLIO = {
     {
       title: 'IP C.I.R.C.L.E League 2026',
       organizer: 'Intellectual Property Offices of The Philippines (IPOPHL)',
-      category: 'Competition', status: 'Participated', date: 'October 26, 2026', url: ''
+      category: 'Quiz Bee', status: 'Participated', date: 'October 26, 2026', url: ''
     },
     {
       title: 'Cyber Apocalypse CTF 2026: The Salt Crown',
@@ -38,7 +38,9 @@ window.PORTFOLIO = {
     },
     {
       title: 'LearnPossible 2 CTF', organizer: 'Hexcore Labs PH',
-      category: 'CTF', status: 'Participated', date: 'October 16, 2026', url: ''
+      category: 'CTF', status: 'Participated', date: 'October 16, 2026', url: '',
+      certificate: '/assets/activities/learnpossible-2-2026/certificate.pdf',
+      certificateImage: '/assets/activities/learnpossible-2-2026/certificate.png'
     },
     {
       title: 'Kaspersky{CTF}', organizer: 'Kaspersky{CTF}',
