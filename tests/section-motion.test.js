@@ -65,7 +65,12 @@ test('content arriving from above uses the opposite vertical movement', () => {
   const run = page.active('card'), start = run.currentTime;
   assert.ok(start < 500);
   page.scroll(1165);
-  assert.ok(run.currentTime > start && run.currentTime < 500);
+  const returning = run.currentTime;
+  assert.ok(returning < 500);
+  page.scroll(1050);
+  assert.ok(run.currentTime > returning && run.currentTime < 500);
+  page.scroll(850);
+  assert.equal(page.active('card'), undefined);
 });
 test('the reading area and offscreen content release animation effects', () => {
   const page = harness();
@@ -91,6 +96,8 @@ test('a visible heading stays sharp while its section is still being read', () =
   page.scroll(910);
   assert.ok(page.active('heading').currentTime < 500);
   page.scroll(895);
+  assert.ok(page.active('heading').currentTime < 500);
+  page.scroll(600);
   assert.equal(page.active('heading'), undefined);
 });
 test('a tall card stays sharp while its remaining content is visible', () => {

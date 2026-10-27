@@ -25,6 +25,11 @@ window.PORTFOLIO = {
   ],
   ctfs: [
     {
+      title: 'IP C.I.R.C.L.E League 2026',
+      organizer: 'Intellectual Property Offices of The Philippines (IPOPHL)',
+      category: 'Competition', status: 'Participated', date: 'October 26, 2026', url: ''
+    },
+    {
       title: 'Cyber Apocalypse CTF 2026: The Salt Crown',
       organizer: 'Hack The Box', category: 'CTF', status: 'Participated',
       date: 'July 24, 2026', url: '',
@@ -45,6 +50,24 @@ window.PORTFOLIO = {
       title: 'CCNA: Enterprise Networking, Security, and Automation',
       issuer: 'Cisco', date: 'September 2026', status: 'Certification',
       url: '/assets/certifications/ccna-enterprise-networking-security-automation/certificate.pdf',
+      linkLabel: 'View certificate'
+    },
+    {
+      title: 'Endpoint Security',
+      issuer: 'Cisco Networking Academy', date: 'October 16, 2025', status: 'Course completion',
+      url: '/assets/certifications/endpoint-security/certificate.pdf',
+      linkLabel: 'View certificate'
+    },
+    {
+      title: 'Cyber Threat Management',
+      issuer: 'Cisco Networking Academy', date: 'September 25, 2025', status: 'Course completion',
+      url: '/assets/certifications/cyber-threat-management/certificate.pdf',
+      linkLabel: 'View certificate'
+    },
+    {
+      title: 'Introduction to Cybersecurity',
+      issuer: 'Cisco Networking Academy', date: 'September 22, 2025', status: 'Course completion',
+      url: '/assets/certifications/introduction-to-cybersecurity/certificate.pdf',
       linkLabel: 'View certificate'
     }
   ]

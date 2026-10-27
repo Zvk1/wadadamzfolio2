@@ -14,6 +14,8 @@ if ('requestAnimationFrame' in window) {
   const active = new Map();
   const header = document.querySelector('.site-header');
   let scheduled = false;
+  let previousScrollY = window.scrollY;
+  let scrollingUp = false;
 
   function release(element) {
     active.get(element)?.cancel();
@@ -35,6 +37,8 @@ if ('requestAnimationFrame' in window) {
   const clamp = value => Math.min(1, Math.max(0, value));
   function update() {
     scheduled = false;
+    if (window.scrollY !== previousScrollY) scrollingUp = window.scrollY < previousScrollY;
+    previousScrollY = window.scrollY;
     if (reducedMotion.matches) return;
     const height = window.innerHeight;
     const headerBottom = header?.getBoundingClientRect().bottom || 0;
@@ -55,7 +59,10 @@ if ('requestAnimationFrame' in window) {
       // Keep the heading/card readable until almost all of it has passed behind
       // the header. The broad entrance band must not become an early exit fade.
       const exitBand = Math.max(1, Math.min(48, elementHeight * 0.2));
-      const fromAbove = clamp((headerBottom + exitBand - bottom) / exitBand) * clamp(window.scrollY / band);
+      // Returning content gets the same broad reveal as content entering below.
+      // Downward scrolling keeps the narrow exit band for readable content.
+      const upperBand = scrollingUp ? band : exitBand;
+      const fromAbove = clamp((headerBottom + upperBand - bottom) / upperBand) * clamp(window.scrollY / band);
       const progress = 0.5 + (fromBelow - fromAbove) * 0.5;
       if (Math.abs(progress - 0.5) < 0.001) {
         release(element); // Full clarity in the reading area; hover styles are free.
