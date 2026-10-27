@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio v2
 
 Zaki Lorenzo V. Boongaling's standalone Apple Pro-inspired portfolio. Graphite surfaces, system typography, neutral text with blue action buttons, an editorial layout, and matched dark/light appearances. The original `Wadadamzfolio` project is separate and unchanged.
@@ -61,3 +62,7 @@ node --test tests/*.test.js
 ```
 
 See `DESIGN-REVIEW.md` for completed checks and the remaining browser review. This copy was created without the original Git history; it can be initialized as its own repository when desired.
+=======
+# wadadamzfolio2
+-  Zaki's Portfolio
+>>>>>>> 99cf39ae3782ae5d5ff3b048076347caa102cc0e
